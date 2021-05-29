@@ -1,0 +1,9 @@
+
+
+<div class="card" [ngStyle]="color=='Normal' ? {'background-color':'#F9F9F9'}:{'background-color':'#8b54b8'}">
+  <div style="padding: 20px;" >
+    <img src="{{image2}}" style="position: relative;width: 73px;height: 73px;">
+    <ng-content style="position: absolute;" select="[header]"></ng-content>
+    <ng-content style="position: absolute;" select="[body]"></ng-content>
+  </div>
+</div>
