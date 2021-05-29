@@ -8,19 +8,34 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-
+import { CaluclatorComponent } from './caluclator/caluclator.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatSliderModule} from '@angular/material/slider';
+import { FormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    CaluclatorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    MatSelectModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatInputModule,
+    MatSlideToggleModule,
+    MatCardModule,
+    MatIconModule,
+    MatSliderModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

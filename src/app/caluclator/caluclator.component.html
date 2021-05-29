@@ -1,0 +1,29 @@
+<mat-card >
+  <div  class="subheading-1 occu-margin">Monthly Income</div>
+  <div class="mat-title occu-margin" >{{income | currency:'INR':'symbol':'3.0'}}</div>
+  <mat-slider min="100000" max="300000" class="occu-margin occupied-width" 
+    [(ngModel)]="income"></mat-slider>
+  <div  class="subheading-1 occu-margin">Monthly Expense</div>
+  <div class="mat-title occu-margin" >{{expense | currency:'INR':'symbol':'1.0'}}</div>
+  <mat-slider class="occu-margin occupied-width"  min="0" max="300000" [(ngModel)]="expense">
+  </mat-slider>
+  <mat-form-field appearance="standard" class="occu-margin occupied-width">
+    <mat-label>Repayment Tenure</mat-label>
+    <mat-select class="mat-body-2">
+      <mat-option value="6 Months" >6 months</mat-option>
+      <mat-option value="12 Months">12 months</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="toggle">
+  <div class="occu-margin subheading-1">Do you have any existing loans </div>
+  <mat-slide-toggle></mat-slide-toggle>
+</div>
+
+    <mat-form-field appearance="standard" class="occu-margin occupied-width">
+      <mat-label>EMI of existing loan (optional)</mat-label>
+      <input matInput placeholder="{{15000 | currency:'INR':'symbol':'1.0'}}">
+      
+    </mat-form-field>
+  
+  
+</mat-card>
