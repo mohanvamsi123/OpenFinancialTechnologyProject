@@ -1,11 +1,33 @@
 .occu-margin {
-  margin: -0px 8px 0px 8px;
+  margin: 0px 8px 0px 8px;
 }
 
-mat-card {
-  width: 300px;
-  padding: 20px;
-  margin-left: 600px;
+.card-heading{
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 20px;
+  background-color: ghostwhite;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.spacing{
+  margin-top:10px;
+}
+
+
+.body {
+  font-family: Montserrat-Regular;
+  font-size: 10px;
+  color: #999999;
+  line-height: 19px;
+}
+.card {
+  //width: 300px;
+  padding:10px 20px 20px 20px;
+  //margin-left: 600px;
+}
+.mat-card{
+  padding: 0px 0px 0px 0px;
 }
 
 .occupied-width {

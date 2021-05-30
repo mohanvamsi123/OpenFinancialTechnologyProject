@@ -16,11 +16,13 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { DisplayComponent } from './display/display.component';
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    CaluclatorComponent
+    CaluclatorComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
