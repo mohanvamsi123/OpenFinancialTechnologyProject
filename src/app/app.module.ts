@@ -16,12 +16,14 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { DisplayComponent } from './display/display.component';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     CaluclatorComponent,
-    DisplayComponent
+    DisplayComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

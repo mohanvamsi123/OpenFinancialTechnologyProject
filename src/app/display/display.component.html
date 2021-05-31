@@ -1,17 +1,21 @@
+<!--Used Inline CSS Along with Angular Materials-->
 <mat-card style="border-radius: 0px 20px 20px 0px;width: 118px;">
   <div class="border" style="text-align: center;margin-top: 60px;margin-bottom: 60px;">
     <div class="mat-caption" style="margin-bottom: 0px;color: white;">
       Loan Amount
     </div>
     <div class="mat-body-1" style="color: white;margin-bottom: 15px;">
+      <!--Using currency pipe with Indian rupee symbol with no float values -->
         {{150000 | currency:'INR':'symbol':'1.0'}}
       </div>
     <div class="mat-caption" style="margin-bottom: 0px;color: white;">
       Your EMI will be
     </div>
     <div class="mat-body-1" style="color: white;margin-bottom: 15px;">
+      <!--Using currency pipe with Indian rupee symbol with no float values -->
         {{150000 | currency:'INR':'symbol':'1.0'}}
       </div>
+      <!--Button used in the website with description as GEt Money-->
       <button mat-flat-button style="border-radius: 24px;color: #663399;">GET MONEY</button>
   </div>
 

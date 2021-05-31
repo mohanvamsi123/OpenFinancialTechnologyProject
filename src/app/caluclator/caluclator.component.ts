@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./caluclator.component.scss']
 })
 export class CaluclatorComponent implements OnInit {
+
+//ngModel Values
 income=100000;
 expense=0;
   constructor() { }

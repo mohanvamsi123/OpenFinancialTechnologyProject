@@ -1,0 +1,15 @@
+//css class used for scrolling navbar effect
+.scrolled {
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+  }
+  //css class used for the navbar when it is not scrolled
+  .scroll-Init {
+    background-color: transparent;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }

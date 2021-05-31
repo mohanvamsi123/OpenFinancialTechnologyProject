@@ -1,33 +1,28 @@
-<p>
-  <mat-toolbar>
-    <button mat-button> <img class="jpg-icon" src="./assets/logo.png" style="width: 50px;height:50px;"
-        alt="Logo"></button>
-    <span class="example-spacer"></span>
-    <button mat-button>Products</button>
-    <button mat-button>Solution</button>
-    <button mat-button>Pricing</button>
-    <button mat-stroked-button
-      style="margin: 20px;border-radius: 24px;color: red;border: 2px solid #663399;color:#663399;">Login</button>
-    <button mat-flat-button
-      style="border-radius: 24px;background-image: linear-gradient(90deg, #9F62C9 0%, #663399 100%);color: #FFFFFF;">Get
-      Started</button>
-  </mat-toolbar>
-</p>
 
-<!--
-<img id="small-img">
-<img id="circle">
--->
+
+
+
+<!-- Used Inline CSS in Most of the Project and Used Angular Materials-->
+
+
+<!--Logic for Toolbar-->
+<!--Navigation Bar(app.navbar) component Projected in Parent component (app.component)-->
+<app-navbar></app-navbar>
+
 <img src="../assets/blob-small.svg" width="400px" height="auto" id="small-img">
-<img src="../assets//circle.svg" id="circle" width="720px" height="auto" >
+<img src="../assets//circle.svg" id="circle" width="720px" height="auto">
 
-<div style="font-family: Montserrat-Medium;font-size: 40px;color: #222222;opacity: 100%;top:155px;left:100px;position: absolute;line-height: 1.2;">We make it Super<br> Simple</div>
+<div
+  style="font-family: Montserrat-Medium;font-size: 40px;color: #222222;opacity: 100%;top:155px;left:100px;position: absolute;line-height: 1.2;">
+  We make it Super<br> Simple</div>
 <div class="line"></div>
 
 <img src="../assets/collect_img-video.png" class="collect-img">
 <img src="../assets/accounting_dots.svg" class="dots">
 
+<!--Caluclator Componenet (Eligibility Caluclator) : Child Component used in parent component(app.component)-->
 <app-caluclator style="position: relative;display: inline-block;margin-top: 80px;margin-left: 280px;"></app-caluclator>
+<!-- To display data from Eligibility Calucalotr ( Disaplay Component) : Child Component used in parent component(app.component)-->
 <app-display style="position: absolute;margin-top: 172px;"></app-display>
 
 <img src="../assets/accounting_dots.svg" class="dots-A">
@@ -35,47 +30,67 @@
 
 <img src="../assets/sol_wave_bg.svg" class="wave">
 
-<app-card [image2]="'../assets/Get Paid Instantly.png'" style=" top:175px;
-left: 70px;position: relative;" [color]="'Normal'">
+
+<!-- Card Component which is used in the webpage to display data (Card Component):Child Component used in parent component(app.component) 
+-->
+<app-card [image2]="'../assets/Get Paid Instantly.png'" style=" top:800px;
+left: 70px;position: absolute;cursor: pointer;display: inline-block;" [color]="bgColor1"
+  (mouseenter)="bgColor1='Unique'" (mouseleave)="bgColor1='Normal'" class="parent">
+  <!--Content projection into the child component with selector as header-->
   <p class="header" header>Quick cash disbursement</p>
+  <!--Content projection into the child component with selector as body-->
   <p class="body" body>Get terms loans that your business needs within 72 hrs</p>
 </app-card>
-<app-card [image2]="'../assets/Low_interest_rate.png'" style=" top: 220px;
-left: 70px;position: relative;" [color]="'Normal'">
+<!-- Card Component which is used in the webpage to display data (Card Component):Child Component used in parent component(app.component) 
+-->
+<app-card [image2]="'../assets/Low_interest_rate.png'" style=" top: 1067px;
+left: 70px;position: absolute;cursor: pointer;display: inline-block;" [color]="bgColor2"
+  (mouseenter)="bgColor2='Unique'" (mouseleave)="bgColor2='Normal'" class="parent">
+  <!--Content projection into the child component with selector as header-->
   <p class="header" header>Low-interest rate</p>
+  <!--Content projection into the child component with selector as body-->
   <p class="body" body>Achieve your financial goals with an amazing interest rate starting at 13% per annum</p>
 </app-card>
-<app-card [image2]="'../assets/Secure_Payments.png'" style=" top: 265px;
-left: 70px;position: relative;" [color]="'Normal'">
+<!-- Card Component which is used in the webpage to display data (Card Component):Child Component used in parent component(app.component) 
+-->
+<app-card [image2]="'../assets/Secure_Payments.png'" style=" top: 1335px;
+left: 70px;position: absolute;cursor: pointer;display: inline-block;" [color]="bgColor3"
+  (mouseenter)="bgColor3='Unique'" (mouseleave)="bgColor3='Normal'" class="parent">
+  <!--Content projection into the child component with selector as header-->
   <p class="header" header>Zero Paperwork</p>
+  <!--Content projection into the child component with selector as body-->
   <p class="body" body>Get started instantly by submitting only your basic details & bank statements</p>
 </app-card>
+<!-- Card Component which is used in the webpage to display data (Card Component):Child Component used in parent component(app.component) 
+-->
 <app-card [image2]="'../assets/Covid.png'" style=" top: 937px;
-left: 450px;position: absolute;" [color]="'Normal'">
+left: 450px;position: absolute;cursor: pointer;" [color]="bgColor4" (mouseenter)="bgColor4='Unique'"
+  (mouseleave)="bgColor4='Normal'" class="parent">
+  <!--Content projection into the child component with selector as header-->
   <p class="header" header>Loans to fight COVID-19</p>
+  <!--Content projection into the child component with selector as body-->
   <p class="body" body>Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh</p>
 </app-card>
-<app-card [image2]="'../assets/freelancer_feature_icon.png'" [color]="'Unique'" style=" top: 1200px;
-left: 450px;position: absolute;">
-  <p class="header-unique" header>Ace your business finances</p>
-  <p class="body-unique" body>Manage banking, accounting & everything in between, on one platform</p>
+<!-- Card Component which is used in the webpage to display data (Card Component):Child Component used in parent component(app.component) 
+-->
+<app-card [image2]="'../assets/freelancer_feature_icon.png'" [color]="bgColor5" style=" top: 1200px;
+left: 450px;position: absolute;cursor: pointer;" (mouseenter)="bgColor5='Unique'" (mouseleave)="bgColor5='Normal'"
+  class="parent">
+  <!--Content projection into the child component with selector as header-->
+  <p class="header" header>Ace your business finances</p>
+  <!--Content projection into the child component with selector as body-->
+  <p class="body" body>Manage banking, accounting & everything in between, on one platform</p>
 </app-card>
 
 
-<div style="font-family: Montserrat-Medium;font-size: 40px;line-height: 1.2;position: absolute;left: 880px;top: 1032px;color:#222222;">Boost your business<br> with Open</div>
+<div class="medium-font"
+  style="font-size: 40px;line-height: 1.2;position: absolute;left: 880px;top: 1032px;color:#222222;">
+  Boost your business<br> with Open</div>
 <div class="line-B"></div>
-<div style="color: #777777;font-family: Montserrat-Regular;font-size: 18px;position: absolute;left: 880px;top: 1180px;">Get your hands on a term loan that’s crafted for your business</div>
+<div class="regular-font"
+  style="color: #777777;font-size: 18px;position: absolute;left: 880px;top: 1180px;">
+  Get your hands on a term loan that’s crafted for your business</div>
 
-
-<button mat-stroked-button
-style="top: 1270px;left:880px;border-radius: 24px;border: 2px solid #663399;color:#663399;position: absolute;">Get an Open Account</button>
-<!--
-font-family: Montserrat-Medium;
-font-size: 40px;
-line-height: 1.2;
-color: black;
-z-index: 0;
-position: absolute;
-left: 880px;
-top: 1032px;
--->
+<!--Button which is used to get an account-->
+<button mat-stroked-button class="AccountButton">Get an
+  Open Account</button>

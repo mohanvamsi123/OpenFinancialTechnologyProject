@@ -1,9 +1,13 @@
-
-
-<div class="card" [ngStyle]="color=='Normal' ? {'background-color':'#F9F9F9'}:{'background-color':'#8b54b8'}">
+<!--Used inline css in this component-->
+<!--Using ngStyle to change background color of the card. The Value will be passed from parent component (app.component) to child component (card.component) based on the hover event performed-->
+<div class="card" [ngStyle]="color=='Normal' ? {'background-color':'#F9F9F9'}:{'background-color':'#8b54b8','opacity':'0.5'}">
   <div style="padding: 20px;" >
+    <!--Image url will be passed from parent component to child component (app.component -> card.component)-->
     <img src="{{image2}}" style="position: relative;width: 73px;height: 73px;">
+
+    <!--Content Projected values from parent to child where selector is used as header-->
     <ng-content style="position: absolute;" select="[header]"></ng-content>
+    <!--Content Projected values from parent to child where selector is used as header-->
     <ng-content style="position: absolute;" select="[body]"></ng-content>
   </div>
 </div>

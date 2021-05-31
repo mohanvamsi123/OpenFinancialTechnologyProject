@@ -1,18 +1,26 @@
-
+<!--Used Angular Materials and inline css-->
 <mat-card style="width:300px;margin-left: 600px;border-radius: 20px;">
   <div class="card-heading">Eligibility Caluclator</div>
   <div class="card">
     <div class="subheading-1 occu-margin spacing" >Monthly Income</div>
+    <!--Displayed value that is generate from mat slider using tow way data bindinf-->
     <div class="mat-title occu-margin">{{income | currency:'INR':'symbol':'3.0'}}</div>
-    <mat-slider min="100000" max="300000" class="occu-margin occupied-width" [(ngModel)]="income"></mat-slider>
+
+    <!--Used mat slider as used ng model(Two way data binding to get the value out of the mat slider) with min and max vaues-->
+    <mat-slider min="100000" max="300000" class="occu-margin occupied-width" [(ngModel)]="income" color='primary'></mat-slider>
     <div style="display: flex;justify-content: space-between;margin-top: -17px;margin-left:15px;margin-right: 15px;margin-bottom: 20px;">
+     <!--As of now these values are raw values but can be used dynamically if the logic is implemented-->
+     <!--Using currency pipe with Indian rupee symbol with no float values -->
       <div class="body">{{100000 | currency:'INR':'symbol':'1.0'}}</div>
+      <!--Using currency pipe with Indian rupee symbol with no float values -->
       <div class="body">{{300000 | currency:'INR':'symbol':'1.0'}}</div>
     </div>
     <div class="subheading-1 occu-margin spacing">Monthly Expense</div>
+    <!--Using currency pipe with Indian rupee symbol with no float values -->
     <div class="mat-title occu-margin">{{expense | currency:'INR':'symbol':'1.0'}}</div>
-    <mat-slider class="occu-margin occupied-width" min="0" max="300000" [(ngModel)]="expense">
+    <mat-slider class="occu-margin occupied-width" min="0" max="300000" [(ngModel)]="expense" color='primary'>
     </mat-slider>
+    <!--Form field (Dropdown to select the repayment tenture)-->
     <mat-form-field appearance="standard" class="occu-margin occupied-width">
       <mat-label>Repayment Tenure</mat-label>
       <mat-select class="mat-body-2">
@@ -20,13 +28,15 @@
         <mat-option value="12 Months">12 months</mat-option>
       </mat-select>
     </mat-form-field>
+    <!--toggle html code-->
     <div class="toggle">
       <div class="occu-margin subheading-1">Do you have any existing loans </div>
-      <mat-slide-toggle></mat-slide-toggle>
+      <mat-slide-toggle color="primary"></mat-slide-toggle>
     </div>
-
+<!--Input field to generate EMI of the exisiting plan-->
     <mat-form-field appearance="standard" class="occu-margin occupied-width" style="margin-top: 10px;">
       <mat-label>EMI of existing loan (optional)</mat-label>
+          <!--Using currency pipe with Indian rupee symbol with no float values -->
       <input matInput placeholder="{{15000 | currency:'INR':'symbol':'1.0'}}">
 
     </mat-form-field>

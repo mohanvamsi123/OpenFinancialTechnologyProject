@@ -1,7 +1,8 @@
+//css class used to generate margin in the card
 .occu-margin {
   margin: 0px 8px 0px 8px;
 }
-
+//css class used for card heading
 .card-heading{
   text-align: center;
   padding: 10px 0px 10px 0px;
@@ -26,6 +27,7 @@
   padding:10px 20px 20px 20px;
   //margin-left: 600px;
 }
+//css class used for mat card
 .mat-card{
   padding: 0px 0px 0px 0px;
 }
@@ -33,10 +35,11 @@
 .occupied-width {
   width: -webkit-fill-available;
 }
-
+//css class used for mat slider
 .mat-slider {
   margin-top: -12px;
 }
+//css class for toggler
 .toggle{
     display: flex;
     justify-content: space-between;
